@@ -1,0 +1,1938 @@
+{
+	"LastLoadout" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"LastMode" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ThermometerInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SanityPillsInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"MotionSensorInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"GlowstickInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"CandleInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"CameraInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"DOTSProjectorInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"TripodInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"FlashlightInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ParabolicMicrophoneInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SaltInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"StrongFlashlightInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"UVFlashlightInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EMFReaderInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"GhostWritingBookInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"DSLRCameraInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"CrucifixInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"HeadMountedCameraInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EVPRecorderInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SoundSensorInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"LighterInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SageInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"totalHuntTime" : {
+		"__type" : "float",
+		"value" : 2385.41943
+	},
+	"amountOfGhostHunts" : {
+		"__type" : "int",
+		"value" : 139
+	},
+	"timeInFavouriteRoom" : {
+		"__type" : "float",
+		"value" : 54413.9727
+	},
+	"roomChanged" : {
+		"__type" : "int",
+		"value" : 17
+	},
+	"abilitiesUsed" : {
+		"__type" : "int",
+		"value" : 195
+	},
+	"amountOfGhostEvents" : {
+		"__type" : "int",
+		"value" : 174
+	},
+	"fuseboxToggles" : {
+		"__type" : "int",
+		"value" : 51
+	},
+	"lightsSwitched" : {
+		"__type" : "int",
+		"value" : 115
+	},
+	"objectsUsed" : {
+		"__type" : "int",
+		"value" : 328
+	},
+	"doorsMoved" : {
+		"__type" : "int",
+		"value" : 682
+	},
+	"amountOfGhostInteractions" : {
+		"__type" : "int",
+		"value" : 2615
+	},
+	"ghostDistanceTravelled" : {
+		"__type" : "float",
+		"value" : 34970.63
+	},
+	"mostCommonGhosts" : {
+		"__type" : "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : {"Mimic":6,"Spirit":11,"Onryo":5,"Thaye":5,"Moroi":5,"Wraith":4,"Phantom":4,"Demon":5,"Myling":2,"Raiju":4,"Revenant":3,"Yokai":6,"Obake":5,"Yurei":7,"Oni":2,"Jinn":2,"Banshee":1,"Hantu":4,"Shade":2,"Mare":2,"TheTwins":4,"Poltergeist":2,"Goryo":2
+	}
+	},
+	"ghostKills" : {
+		"__type" : "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : {"Mimic":4,"Spirit":5,"Onryo":3,"Thaye":4,"Moroi":4,"Wraith":2,"Phantom":2,"Demon":3,"Myling":1,"Raiju":3,"Revenant":1,"Yokai":3,"Obake":4,"Yurei":3,"Oni":2,"Jinn":1,"Banshee":1,"Hantu":1,"Shade":0,"Mare":2,"TheTwins":1,"Poltergeist":2,"Goryo":0
+	}
+	},
+	"playedMaps" : {
+		"__type" : "System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : {6:32,1:1,8:1,9:2,12:4,4:2,0:37,3:1,5:7,11:5,7:1
+	}
+	},
+	"revivedAmount" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"ghostsRepelled" : {
+		"__type" : "int",
+		"value" : 14
+	},
+	"photosTaken" : {
+		"__type" : "int",
+		"value" : 352
+	},
+	"amountOfCursedHuntsTriggered" : {
+		"__type" : "int",
+		"value" : 9
+	},
+	"amountOfCursedPossessionsUsed" : {
+		"__type" : "int",
+		"value" : 13
+	},
+	"objectivesCompleted" : {
+		"__type" : "int",
+		"value" : 129
+	},
+	"ghostsMisidentifiedAmount" : {
+		"__type" : "int",
+		"value" : 44
+	},
+	"ghostsIdentifiedAmount" : {
+		"__type" : "int",
+		"value" : 49
+	},
+	"itemsLost" : {
+		"__type" : "int",
+		"value" : 374
+	},
+	"itemsBought" : {
+		"__type" : "int",
+		"value" : 576
+	},
+	"moneySpent" : {
+		"__type" : "int",
+		"value" : 100064
+	},
+	"moneyEarned" : {
+		"__type" : "int",
+		"value" : 1000000
+	},
+	"diedAmount" : {
+		"__type" : "int",
+		"value" : 52
+	},
+	"timeSpentBeingChased" : {
+		"__type" : "float",
+		"value" : 353.211517
+	},
+	"timeSpentInGhostsRoom" : {
+		"__type" : "float",
+		"value" : 18126.998
+	},
+	"timeSpentInTruck" : {
+		"__type" : "float",
+		"value" : 6834.16943
+	},
+	"timeSpentInLight" : {
+		"__type" : "float",
+		"value" : 28485.97
+	},
+	"timeSpentInDark" : {
+		"__type" : "float",
+		"value" : 29368.25
+	},
+	"timeSpentInvestigating" : {
+		"__type" : "float",
+		"value" : 66946.5
+	},
+	"phrasesRecognized" : {
+		"__type" : "int",
+		"value" : 15
+	},
+	"sanityGained" : {
+		"__type" : "float",
+		"value" : 876.614563
+	},
+	"sanityLost" : {
+		"__type" : "float",
+		"value" : 7318.23
+	},
+	"distanceTravelled" : {
+		"__type" : "float",
+		"value" : 75748.33
+	},
+	"amountOfBonesCollected" : {
+		"__type" : "int",
+		"value" : 58
+	},
+	"RewardMultiplier" : {
+		"__type" : "float",
+		"value" : 3
+	},
+	"LastDifficulty" : {
+		"__type" : "Difficulty,Assembly-CSharp",
+		"value" : {
+		"_ES3Ref" : "4972176742657063215",
+		"difficulty" : 2,
+		"nameKey" : "Contract_Professional",
+		"descriptionKey" : "Difficulty_ProfessionalDescription",
+		"sanityPillRestorationAmount" : 30,
+		"startingSanity" : 100,
+		"sanityDrain" : 2,
+		"sprinting2" : 1,
+		"flashlights" : true,
+		"loseItemsOnDeath" : true,
+		"playerSpeed" : 1,
+		"evidenceGiven" : 3,
+		"changingFavouriteRoom" : 1,
+		"interactionAmount" : 1,
+		"eventFrequency" : 2,
+		"huntDuration" : 3,
+		"gracePeriod" : 3,
+		"fingerprintChance" : 1,
+		"fingerprintDuration" : 120,
+		"friendlyGhost" : false,
+		"killsExtendHuntDuration" : 0,
+		"roamingFrequency" : 3,
+		"ghostSpeed" : 1,
+		"setupTime" : 0,
+		"selectedWeather" : 0,
+		"amountOfDoorsOpen" : 2,
+		"amountOfHidingPlaces" : 2,
+		"sanityMonitor" : true,
+		"activityMonitor" : true,
+		"fuseBoxVisibleOnMap" : true,
+		"fuseBoxStartPower" : 1,
+		"cursedPossessionsQuantity" : 1,
+		"chosenCursedItems" : [
+			0,0,0,0,0,0,0
+		],
+		"overrideMultiplier" : -1,
+		"actualWeather" : 2,
+		"actualCursedItems" : [
+			2
+		],
+		"itemTiers" : [
+			
+		]
+	}
+	},
+	"Experience" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"PlayersMoney" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Bone11" : {
+		"__type" : "int",
+		"value" : 10
+	},
+	"GhostType" : {
+		"__type" : "string",
+		"value" : "Spirit"
+	},
+	"Level" : {
+		"__type" : "int",
+		"value" : 53
+	},
+	"Bone5" : {
+		"__type" : "int",
+		"value" : 5
+	},
+	"MirrorsFound" : {
+		"__type" : "int",
+		"value" : 9
+	},
+	"TarotDevil" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"TarotMoon" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"TarotSun" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"AutoAdd1" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd0" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"AutoAdd-1" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SaveVersion" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"recentPlayerNames" : {
+		"__type" : "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : [
+		"superhandsomeAF","Goop"
+	]
+	},
+	"recentPlayerIDS" : {
+		"__type" : "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : [
+		"76561198323347208","76561199108772760"
+	]
+	},
+	"MusicBoxesFound" : {
+		"__type" : "int",
+		"value" : 8
+	},
+	"Bone10" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"Bone0" : {
+		"__type" : "int",
+		"value" : 5
+	},
+	"Tripod1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Thermometer1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"StrongFlashlight1" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"SoundSensor1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Sage1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SanityPills1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Salt1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ParabolicMicrophone1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"MotionSensor1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Lighter1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"HeadMountedCamera1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Glowstick1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Crucifix1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Candle1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Camera1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"UVFlashlight1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EVPRecorder1" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"GhostWritingBook1" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Flashlight1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EMFReader1" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"DOTSProjector1" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"DSLRCamera1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Tripod0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Thermometer0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"StrongFlashlight0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"SoundSensor0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"Sage0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"SanityPills0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"Salt0" : {
+		"__type" : "int",
+		"value" : 3
+	},
+	"ParabolicMicrophone0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"MotionSensor0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Lighter0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"HeadMountedCamera0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"Glowstick0" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"Crucifix0" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"Candle0" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"Camera0" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"UVFlashlight0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"EVPRecorder0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"GhostWritingBook0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Flashlight0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EMFReader0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"DOTSProjector0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"DSLRCamera0" : {
+		"__type" : "int",
+		"value" : 5
+	},
+	"Prestige" : {
+		"__type" : "int",
+		"value" : 16
+	},
+	"myTotalExp" : {
+		"__type" : "int",
+		"value" : 3833
+	},
+	"daily0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily0Progression" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily0Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily0Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily0Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily1" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily1Progression" : {
+		"__type" : "int",
+		"value" : 3
+	},
+	"daily1Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily1Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily4Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily2" : {
+		"__type" : "int",
+		"value" : 7
+	},
+	"daily2Progression" : {
+		"__type" : "int",
+		"value" : 10
+	},
+	"daily2Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily2Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily8Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily3" : {
+		"__type" : "int",
+		"value" : 14
+	},
+	"daily3Progression" : {
+		"__type" : "int",
+		"value" : 3
+	},
+	"daily3Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily3Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily14Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"dailyChallengeSeed" : {
+		"__type" : "int",
+		"value" : 534011718
+	},
+	"weekly0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"weekly0Progression" : {
+		"__type" : "int",
+		"value" : 13
+	},
+	"weekly0Completed" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly0Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly0Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly1" : {
+		"__type" : "int",
+		"value" : 7
+	},
+	"weekly1Progression" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly1Completed" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly1Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly1Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly2" : {
+		"__type" : "int",
+		"value" : 13
+	},
+	"weekly2Progression" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"weekly2Completed" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly2Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly2Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weeklyDifficultyProgression" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weeklyDifficultyCompleted" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weeklyDifficultyRecieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weeklyChallengeSeed" : {
+		"__type" : "int",
+		"value" : 471587800
+	},
+	"RepellentTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"RepellentInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedRepellentAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"IgniterTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"IgniterInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedIgniterAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SoundSensorTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedSoundSensorAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SpiritBoxTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SpiritBoxTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"SpiritBoxTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"SpiritBoxInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedSpiritBoxAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"HeadGearTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"HeadGearInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedHeadGearAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"CrucifixTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedCrucifixAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"VideoCameraTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"VideoCameraTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"VideoCameraTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"VideoCameraInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedVideoCameraAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"GhostWritingBookTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"GhostWritingBookTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"GhostWritingBookTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"committedGhostWritingBookAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EMFReaderTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EMFReaderTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"EMFReaderTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"committedEMFReaderAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"UVLightTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"UVLightTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"UVLightTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"UVLightInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedUVLightAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SaltTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedSaltAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ParabolicMicrophoneTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedParabolicMicrophoneAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"FlashlightTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"FlashlightTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"FlashlightTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"committedFlashlightAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"TripodTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedTripodAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"DOTSProjectorTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"DOTSProjectorTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"DOTSProjectorTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"committedDOTSProjectorAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ThermometerTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ThermometerTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"ThermometerTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"committedThermometerAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"FirelightTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"FirelightInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedFirelightAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"MotionSensorTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedMotionSensorAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"PhotoCameraTier" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"PhotoCameraInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedPhotoCameraAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SanityMedicationTier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SanityMedicationInventory" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"committedSanityMedicationAmount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"LegacyColor" : {
+		"__type" : "int",
+		"value" : 5
+	},
+	"NewLevel" : {
+		"__type" : "int",
+		"value" : 101
+	},
+	"PrestigeIndex" : {
+		"__type" : "int",
+		"value" : 16
+	},
+	"PrestigeTheme" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"DOTSProjectorTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"DOTSProjectorTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"DOTSProjectorTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"DOTSProjectorTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"EMFReaderTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"EMFReaderTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"EMFReaderTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"EMFReaderTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"GhostWritingBookTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"GhostWritingBookTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"GhostWritingBookTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"GhostWritingBookTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SpiritBoxTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SpiritBoxTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SpiritBoxTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SpiritBoxTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ThermometerTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ThermometerTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ThermometerTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ThermometerTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"UVLightTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"UVLightTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"UVLightTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"UVLightTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"VideoCameraTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"VideoCameraTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"VideoCameraTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"VideoCameraTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"CrucifixTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"CrucifixTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"CrucifixTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"CrucifixTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"CrucifixTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"CrucifixTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FirelightTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FirelightTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FirelightTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FirelightTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FirelightTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FirelightTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FlashlightTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FlashlightTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FlashlightTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"FlashlightTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"HeadGearTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"HeadGearTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"HeadGearTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"HeadGearTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"HeadGearTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"HeadGearTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"IgniterTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"IgniterTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"IgniterTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"IgniterTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"IgniterTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"IgniterTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RepellentTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RepellentTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RepellentTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RepellentTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RepellentTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RepellentTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"MotionSensorTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"MotionSensorTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"MotionSensorTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"MotionSensorTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"MotionSensorTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"MotionSensorTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ParabolicMicrophoneTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"ParabolicMicrophoneTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ParabolicMicrophoneTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ParabolicMicrophoneTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ParabolicMicrophoneTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"ParabolicMicrophoneTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"PhotoCameraTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"PhotoCameraTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"PhotoCameraTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"PhotoCameraTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"PhotoCameraTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"PhotoCameraTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SaltTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"SaltTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SaltTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SaltTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SaltTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SaltTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SanityMedicationTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SanityMedicationTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SanityMedicationTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SanityMedicationTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SanityMedicationTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SanityMedicationTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SoundSensorTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SoundSensorTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SoundSensorTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SoundSensorTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SoundSensorTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"SoundSensorTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"TripodTierOneUnlocked" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"TripodTierOneUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"TripodTierTwoUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"TripodTierTwoUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"TripodTierThreeUnlocked" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"TripodTierThreeUnlockOwned" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"RoleIndex" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"UVLight0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SpiritBox0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"VideoCamera0" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Bone7" : {
+		"__type" : "int",
+		"value" : 8
+	},
+	"TarotTower" : {
+		"__type" : "int",
+		"value" : 3
+	},
+	"recentPlayerPlatforms" : {
+		"__type" : "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : [
+		0,0
+	]
+	},
+	"OuijasFound" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"daily3Received" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"AutoBuy-1" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy0" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"AutoBuy1" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy2" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy3" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy4" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy5" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy6" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy7" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy8" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoBuy9" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"UVLight1" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily1Received" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily2Received" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily0Received" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"PhotoCamera0" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Bone1" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"VoodoosFound" : {
+		"__type" : "int",
+		"value" : 6
+	},
+	"MonkeyPawFound" : {
+		"__type" : "int",
+		"value" : 7
+	},
+	"daily1Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily6Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily15Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"AutoAdd2" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd3" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd4" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd5" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd6" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd7" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd8" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"AutoAdd9" : {
+		"__type" : "bool",
+		"value" : false
+	},
+	"Bone6" : {
+		"__type" : "int",
+		"value" : 7
+	},
+	"PhotoCamera1" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Bone9" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"daily2Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily9Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily11Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Bone8" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"daily3Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Flashlight2" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Bone2" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Bone3" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"daily7Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"DOTSProjector0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"EMFReader0Tier" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Flashlight0Tier" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"GhostWritingBook0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SpiritBox0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Thermometer0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"UVLight0Tier" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"VideoCamera0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Crucifix0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Firelight0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"HeadGear0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Igniter0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Repellent0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"MotionSensor0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"ParabolicMicrophone0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"PhotoCamera0Tier" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Salt0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SanityMedication0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"SoundSensor0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Tripod0Tier" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"CursorColor" : {
+		"__type" : "Color",
+		"value" : {
+		"r" : 1,
+		"g" : 1,
+		"b" : 1,
+		"a" : 1
+	}
+	},
+	"Player0Color" : {
+		"__type" : "Color",
+		"value" : {
+		"r" : 0.7529412,
+		"g" : 0,
+		"b" : 0,
+		"a" : 1
+	}
+	},
+	"Player1Color" : {
+		"__type" : "Color",
+		"value" : {
+		"r" : 0,
+		"g" : 0.654902,
+		"b" : 0.7529412,
+		"a" : 1
+	}
+	},
+	"Player2Color" : {
+		"__type" : "Color",
+		"value" : {
+		"r" : 0.243137255,
+		"g" : 0.7529412,
+		"b" : 0,
+		"a" : 1
+	}
+	},
+	"Player3Color" : {
+		"__type" : "Color",
+		"value" : {
+		"r" : 0.8666667,
+		"g" : 0,
+		"b" : 0.8392157,
+		"a" : 1
+	}
+	},
+	"InventoryTutorialComplete" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"ShopTutorialComplete" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"ACH_COMPLETE_30_DAILY_TASKS" : {
+		"__type" : "int",
+		"value" : 20
+	},
+	"LoadoutTutorialComplete" : {
+		"__type" : "bool",
+		"value" : true
+	},
+	"DOTSProjector0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"EMFReader0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Flashlight0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"GhostWritingBook0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"SpiritBox0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Thermometer0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"UVLight0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"VideoCamera0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Crucifix0Amount" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"Firelight0Amount" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"Igniter0Amount" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"Repellent0Amount" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"PhotoCamera0Amount" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"Salt0Amount" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"Tripod0Amount" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"SanityMedication0Amount" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"EquippedLoadout" : {
+		"__type" : "int",
+		"value" : -2
+	},
+	"ACH_COMPLETE_FIFTY_OPTIONAL_OBJECTIVES" : {
+		"__type" : "int",
+		"value" : 41
+	},
+	"daily13Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"Loadout0Name" : {
+		"__type" : "string",
+		"value" : "Loadout 1"
+	},
+	"Bone4" : {
+		"__type" : "int",
+		"value" : 2
+	},
+	"AchievementHunterProgression" : {
+		"__type" : "int",
+		"value" : 27
+	},
+	"recentPlayerPlatformIDS" : {
+		"__type" : "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],mscorlib",
+		"value" : [
+		"76561198323347208","76561199108772760"
+	]
+	},
+	"objective1Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"objective2Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"lighthouseKeeperProgression" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"daily-1Progression" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily-1Completed" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily-1Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"daily-1Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly-1Progression" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly-1Completed" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly-1Recieved" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"weekly-1Variant" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"currentSeasonalEvent" : {
+		"__type" : "SeasonalEventController+SeasonalEventType,Assembly-CSharp",
+		"value" : 0
+	},
+	"objective0Completed" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"ParabolicMicrophone0Amount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"MotionSensor0Amount" : {
+		"__type" : "int",
+		"value" : 0
+	},
+	"rangerChallengeProgression" : {
+		"__type" : "int",
+		"value" : 1
+	},
+	"lastSmallSunnyMeadowsMap" : {
+		"__type" : "int",
+		"value" : 4
+	},
+	"sunnyMeadowsSurvivalProgression" : {
+		"__type" : "int",
+		"value" : 1
+	}
+}
