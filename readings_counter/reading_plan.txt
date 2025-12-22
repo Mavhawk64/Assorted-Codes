@@ -1,14 +1,15 @@
 == Reading Plan Summary ==
 
-                    Total pages to read: 42.55
-Pages to read per day (Monday-Thursday): 10.64
+                          Total pages to read: 42.55
+Pages to read per day (Monday-Friday, 5 days): 8.51
 
 Monday reading plan:
   Read subsection 8.1.1: 3.33 pages
   Read subsection 8.1.2: 2.17 pages
   Read subsection 8.1.3: 6.00 pages
-  Total pages for the day: 11.5 (Target: 10.64) 108.11% of target
+  Total pages for the day: 11.50 (Target: 8.51) 135.14% of target
 Pages covered so far: 11.50
+Updated pages per day for remaining 4 days: 7.76 pages/day
 
 Tuesday reading plan:
   Read subsection 8.2.1: 1.75 pages
@@ -17,23 +18,30 @@ Tuesday reading plan:
   Read subsection 8.2.4: 0.95 pages
   Read subsection 8.2.5: 0.50 pages
   Read subsection 8.3.1: 6.75 pages
-  Read subsection 8.3.2: 0.80 pages
-  Total pages for the day: 11.300000000000011 (Target: 10.64) 106.23% of target
-Pages covered so far: 22.80
+  Total pages for the day: 10.50 (Target: 7.76) 135.27% of target
+Pages covered so far: 22.00
+Updated pages per day for remaining 3 days: 6.85 pages/day
 
 Wednesday reading plan:
+  Read subsection 8.3.2: 0.80 pages
   Read subsection 8.4.1: 0.50 pages
   Read subsection 8.4.2: 5.00 pages
   Read subsection 8.4.3: 1.92 pages
-  Read subsection 8.4.4: 5.00 pages
-  Total pages for the day: 12.416666666666686 (Target: 10.64) 116.73% of target
-Pages covered so far: 35.22
+  Total pages for the day: 8.22 (Target: 6.85) 119.95% of target
+Pages covered so far: 30.22
+Updated pages per day for remaining 2 days: 6.17 pages/day
 
 Thursday reading plan:
+  Read subsection 8.4.4: 5.00 pages
   Read subsection 8.5.1: 1.67 pages
+  Total pages for the day: 6.67 (Target: 6.17) 108.11% of target
+Pages covered so far: 36.88
+Updated pages per day for remaining 1 days: 5.67 pages/day
+
+Friday reading plan:
   Read subsection 8.5.2: 0.33 pages
   Read subsection 8.6.0: 0.83 pages
   Read subsection 8.10.1: 1.75 pages
   Read subsection 8.10.2: 2.75 pages
-  Total pages for the day: 7.333333333333314 (Target: 10.64) 68.94% of target
+  Total pages for the day: 5.67 (Target: 5.67) 100.00% of target
 Pages covered so far: 42.55
