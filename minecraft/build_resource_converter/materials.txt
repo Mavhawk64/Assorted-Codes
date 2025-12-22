@@ -1,0 +1,121 @@
+Exterior:
+1910   spruce log (29x64 + 54)
+128      stripped spruce log (2x64)
+1730   spruce planks (27x64 + 2)
+188     spruce stairs (2x64 + 60)
+8          spruce trapdoor
+80      spruce sign (5x16)
+460    dark oak stairs (7x64 + 12)
+8        dark oak slab
+784    dark oak fence (12x64 + 16)
+132    dark oak fencegate (2x64 + 4)
+16      dark oak door
+156    dark oak trapdoor (2x64 + 28)
+12      dark oak pressure plate
+80      oak trapdoor (64 + 16)
+64      jungle stairs
+8         jungle fence
+48      jungle fencegate
+180    jungle trapdoor (3x64 + 8)
+128    acacia fence (2x64)
+48      deepslate bricks
+528    deepslate brick stairs (8x64 + 16)
+197    deepslate brick slab (3x64 + 25)
+606    deepslate brick wall (9x64 + 30)
+256    lantern (4x64)
+192    glass pane (3x64 + 20)
+144    glowstone (2x64 + 16)
+24      chest
+24      barrel
+48      grindstone
+1        water bucket
+120    grass block (64 + 56)
+20      oak leaves
+24      sweet berries
+64      carrot
+132    sugar cane (2x64 + 4)
+32      bamboo
+1        sea grass
+1        fern
+1        lilypad
+1        seapickle
+
+Interior:
+149    spruce log (2x64 + 21)
+976    spruce planks (15x64 + 16)
+12      spruce slab
+4        spruce fence
+6        spruce door
+276    spruce trapdoor (4x64 + 20)
+16      spruce sign
+28      spruce pressure plate
+97      dark oak stairs (64 + 33)
+28      dark oak stairs
+47      dark oak fence
+28      dark oak fencegate
+8        dark oak door
+16      dark oak pressure plate
+61      jungle trapdoor
+5        ladder
+73      stone (64 + 9)
+73      cobblestone (64 + 9)
+73      andesite
+11      stone stairs
+12      cobblestone stairs
+11      andesite stairs
+48      dead brain coral block
+8        deepslate bricks
+1        deepslate brick wall
+2        enderchest
+105    chest (64 + 41)
+16      campfire
+133    barrel (2x64 + 5)
+79      bookshelf (64 + 15)
+1        crafting table
+12      smoker
+12      blast furnace
+2        stonecutter
+4        smithing table
+2        loom
+67      glowstone (64 + 3)
+124    lantern (64 + 60)
+32      glow item frame
+4        torch
+16      armor stand
+24      white carpet
+28      lime carpet
+4        pink carpet
+16      purple carpet
+16      red carpet
+32      black carpet
+4        black wool
+1        golden apple
+1        melon
+1        cake
+1        glow berries
+1        sweet berries
+4        dead fire coral fan
+4        anvil
+1        enchanted book --- IGNORE ---
+1        enchanting table
+1        blue bed
+2        enderdragon heads  --- IGNORE ---
+24      item frame
+12      blue candle
+4        scaffolding
+8        armor stand
+52      flower pot
+4        spyglass
+4        compass
+45      grass block
+16      oak leaves
+4        spruce sapling
+4        dark oak sapling
+5        seapickle
+54      bamboo
+2        chain
+1        water bucket
+1        iron helmet, chestplate, boots  --- IGNORE ---
+1        gold helmet, chestplate, boots  --- IGNORE ---
+1        diamond helmet, chestplate, boots --- IGNORE ---
+1        netherite helmet --- IGNORE ---
