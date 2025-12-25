@@ -121,7 +121,12 @@ def create_grid(has_partial_hints: bool = False, dev: bool = False):
             encoding="utf-8",
         ) as f:
             content = f.read().split("\n")
-        # first 8 lines are column hints
+        # first 8* lines are column hints
+        for i in range(len(content)):
+            if "[" in content[i]:
+                HINTS_LENGTH = i
+                break
+        print("Using HINTS_LENGTH =", HINTS_LENGTH)
         COL_NUMS_DISPLAY = []
         for i in range(HINTS_LENGTH):
             line = content[i][HINTS_LENGTH * 3 :]
@@ -272,5 +277,24 @@ def get_grid_one_step(GRID, ROWS, COLUMNS, HEIGHT, row_col_idx: tuple):
     return GRID
 
 
+def generate_puzzle_from_text():
+    GRID, ROWS, COLUMNS, ROW_NUMS_DISPLAY, COL_NUMS_DISPLAY, WIDTH, HEIGHT = (
+        create_grid(has_partial_hints=HAS_PARTIAL_HINTS, dev=False)
+    )
+    display_grid(
+        GRID,
+        ROWS,
+        COLUMNS,
+        ROW_NUMS_DISPLAY,
+        COL_NUMS_DISPLAY,
+        WIDTH,
+        HEIGHT,
+        output_file=os.path.join(
+            os.path.dirname(__file__), "puzzles/puzzle_output.txt"
+        ),
+    )
+
+
 if __name__ == "__main__":
-    run_solver_in_dev_mode()
+    # run_solver_in_dev_mode()
+    generate_puzzle_from_text()
