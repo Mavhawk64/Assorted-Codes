@@ -81,23 +81,30 @@ def quick_remove_junk(guesses, total_filled):
     return filtered
 
 
+def generate_guesses(length, blocks):
+    if not blocks:
+        return [[0] * length]
+    min_needed = sum(blocks) + len(blocks) - 1
+    results = []
+    for start in range(length - min_needed + 1):
+        prefix = [0] * start + [1] * blocks[0]
+        if len(blocks) == 1:
+            suffix = [0] * (length - len(prefix))
+            results.append(prefix + suffix)
+        else:
+            prefix.append(0)
+            for sub_guess in generate_guesses(length - len(prefix), blocks[1:]):
+                results.append(prefix + sub_guess)
+    return results
+
+
 def run_checker(LIST, ROW_COL, debug=False):
     LENGTH = len(ROW_COL)
     if sum(LIST) == ROW_COL.count(1):
         if debug:
             print("Already solved!")
         return fill_nones_with_zeros(ROW_COL)
-    guesses = []
-    # guesses (for length 5 like above) = [[0,0,0,0,0], [0,0,0,0,1], [0,0,0,1,0], ..., [1,1,1,1,1]]
-    # then we verify later
-    for i in range(2**LENGTH):
-        guess = []
-        for j in range(LENGTH):
-            if (i >> j) & 1:
-                guess.append(1)
-            else:
-                guess.append(0)
-        guesses.append(guess)
+    guesses = generate_guesses(LENGTH, LIST)
     if debug:
         print("Total guesses before quick removal:", len(guesses))
     guesses = quick_remove_junk(guesses, sum(LIST))

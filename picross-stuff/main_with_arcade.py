@@ -193,21 +193,7 @@ class MyGame(arcade.Window):
         """
         Called when the user presses a mouse button.
         """
-
-        # Change the x/y screen coordinates to grid coordinates
-        column = int(x) // (WIDTH + MARGIN) - 8
-        row = int(SCREEN_HEIGHT - y) // (HEIGHT + MARGIN) - 8
-
-        print(f"Click coordinates: ({x}, {y}). Grid coordinates: ({column}, {row})")
-
-        # Make sure we are on-grid. It is possible to click in the upper right
-        # corner in the margin and go to a grid location that doesn't exist
-        if 0 <= row < ROW_COUNT and 0 <= column < COLUMN_COUNT:
-            # Flip the location between 1 and 0.
-            if self.GRID[row][column] == 0:
-                self.GRID[row][column] = 1
-            else:
-                self.GRID[row][column] = 0
+        pass
 
 
 def main():
@@ -216,5 +202,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
     main()
