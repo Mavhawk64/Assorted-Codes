@@ -1,11 +1,12 @@
 import os
 
+INPUT_FILE = "ch8_d2.txt"
 FILE_OUTPUT = True
 OUTPUT_FILE = "reading_plan.txt"
-DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday"]
 
 
-with open(os.path.join(os.path.dirname(__file__), "ch8.txt"), "r") as file:
+with open(os.path.join(os.path.dirname(__file__), INPUT_FILE), "r") as file:
     txt_input = [section.split("\n") for section in file.read().split("\n\n")]
 
 # input is like ch.sec.sub:pg# (?/?)-pg# (!/!)
@@ -18,6 +19,8 @@ pg_cnt = []
 
 for section in txt_input:
     for subsection in section:
+        if not subsection.strip():
+            continue
         sub = subsection.split(":")[0]
         pages = subsection.split(":")[1]
         start_pg_txt = pages.split("-")[0]
@@ -125,3 +128,7 @@ for day in range(len(DAYS)):
                 out_file.write("\nAll reading completed early!\n")
         break
 print("\n== End of Reading Plan ==")
+
+if FILE_OUTPUT:
+    with open(os.path.join(os.path.dirname(__file__), OUTPUT_FILE), "a") as out_file:
+        out_file.write("\n== End of Reading Plan ==\n")
