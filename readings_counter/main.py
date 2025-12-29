@@ -83,7 +83,8 @@ for day in range(len(DAYS)):
             with open(
                 os.path.join(os.path.dirname(__file__), OUTPUT_FILE), "a"
             ) as out_file:
-                out_file.write(f"  Read subsection {sub}: {page_count:.2f} pages\n")
+                out_file.write(
+                    f"  Read subsection {sub}: {page_count:.2f} pages\n")
         pages_covered += page_count
         ss_pointer += 1
     print(
