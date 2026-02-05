@@ -3,7 +3,10 @@ import os
 INPUT_FILE = "ch8_d2.txt"
 FILE_OUTPUT = True
 OUTPUT_FILE = "reading_plan.txt"
-DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday"]
+DAYS = [
+    "Wednesday",
+    "Thursday",
+]
 
 
 with open(os.path.join(os.path.dirname(__file__), INPUT_FILE), "r") as file:

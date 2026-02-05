@@ -7,7 +7,7 @@ from list_checker import run_checker
 
 HAS_PARTIAL_HINTS = False
 
-INPUT = "wario_9b.txt"
+INPUT = "wario_spg.txt"
 HINTS_LENGTH = 8
 
 
@@ -142,6 +142,11 @@ def create_grid(has_partial_hints: bool = False, dev: bool = False):
                 counter += 1
                 if line == "":
                     break
+        # APPEND EXTRA Nones to each column to make length = max(len(col)) for col in COL_NUMS_DISPLAY
+        max_col_len = max(len(col) for col in COL_NUMS_DISPLAY)
+        COL_NUMS_DISPLAY = [
+            col + [None] * (max_col_len - len(col)) for col in COL_NUMS_DISPLAY
+        ]
         COL_NUMS_DISPLAY = np.array(COL_NUMS_DISPLAY).T.tolist()
         # COLUMNS = remove nones from COL_NUMS_DISPLAY
         COLUMNS = [[num for num in col if num is not None] for col in COL_NUMS_DISPLAY]
@@ -296,5 +301,5 @@ def generate_puzzle_from_text():
 
 
 if __name__ == "__main__":
-    # run_solver_in_dev_mode()
-    generate_puzzle_from_text()
+    run_solver_in_dev_mode()
+    # generate_puzzle_from_text()
