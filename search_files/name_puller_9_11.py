@@ -1,3 +1,19 @@
+# name_puller_9_11.py
+#
+# Usage:
+#   python name_puller_9_11.py --dataset=9
+#   python name_puller_9_11.py --dataset=10
+#   python name_puller_9_11.py --dataset=11
+#
+# Notes:
+# - A "VALID" response is ONLY when the loaded page body is JSON AND has:
+#     data["hits"] as a dict AND data["hits"]["hits"] as a list (possibly empty)
+#   Examples:
+#     Empty case: {"hits": {"hits": []}, ...}  -> VALID (no hit)
+#     Valid case: {"hits": {"hits": [ ... ]}, ...} -> VALID (hit)
+# - Anything else (HTML gate, bot check, access denied, queue) is INVALID -> "auth"
+# - When too many "auth-like" chunks occur in a row, we pause for manual re-auth.
+
 import argparse
 import asyncio
 import json
@@ -25,14 +41,25 @@ DATASET_RANGES: dict[int, tuple[int, int]] = {
     11: (2_205_655, 2_730_262),
 }
 
+# Soft heuristics (fast path) — NOT authoritative by themselves
 ACCESS_DENIED_RE = re.compile(r"access denied|you don't have permission", re.IGNORECASE)
 QUEUE_RE = re.compile(r"queue-it|safetynet|please wait", re.IGNORECASE)
+
 FILENAME_RE = re.compile(r"^EFTA(?P<num>\d{8})\.pdf$", re.IGNORECASE)
 
 NAV_TIMEOUT_MS_DEFAULT = 30_000
 RETRIES_DEFAULT = 2
 CHUNK_SIZE_DEFAULT = 50
-AUTH_FAILS_IN_ROW_DEFAULT = 6
+
+# Number of consecutive "auth-like chunks" before pausing for manual re-auth.
+AUTH_FAILS_IN_ROW_DEFAULT = 4
+
+# When determining whether a chunk is "auth-like", require at least this many auth
+# results within the chunk (prevents pausing due to 1-2 random tab glitches).
+AUTH_MIN_IN_CHUNK_DEFAULT = 10
+
+# Also require this fraction of the chunk to be auth-like before counting it.
+AUTH_FRACTION_IN_CHUNK_DEFAULT = 0.5
 
 
 def n_to_filename(n: int) -> str:
@@ -51,6 +78,7 @@ def multimedia_url(filename: str) -> str:
 
 
 def encode_spaces(path_or_url: str) -> str:
+    # Convert spaces to %20 without breaking slashes/colons
     return quote(path_or_url, safe="/:")
 
 
@@ -87,13 +115,59 @@ def save_resume(resume_path: Path, last_pulled_file: str) -> None:
     )
 
 
-async def extract_json_from_page(page) -> dict:
+async def extract_text_payload(page) -> str:
+    """
+    DOJ JSON responses are often rendered as a document with either <pre> or body text.
+    This extracts the visible JSON string (or HTML text if blocked).
+    """
     pre = page.locator("pre")
     if await pre.count():
-        text = (await pre.first.inner_text()).strip()
-    else:
-        text = (await page.locator("body").inner_text()).strip()
-    return json.loads(text)
+        return (await pre.first.inner_text()).strip()
+    return (await page.locator("body").inner_text()).strip()
+
+
+def is_valid_multimedia_json(data: object) -> bool:
+    """
+    VALID if and only if:
+      - top-level is dict
+      - has key "hits" with dict value
+      - hits has key "hits" with list value (may be empty)
+    """
+    if not isinstance(data, dict):
+        return False
+    hits_obj = data.get("hits")
+    if not isinstance(hits_obj, dict):
+        return False
+    hits_list = hits_obj.get("hits")
+    if not isinstance(hits_list, list):
+        return False
+    return True
+
+
+async def parse_search_json_or_invalid(page) -> tuple[dict | None, str | None, str]:
+    """
+    Returns:
+      (data, None, payload_head)        -> VALID multimedia-search JSON schema
+      (None, "auth", payload_head)      -> INVALID (gate/bot/unauthorized/HTML/other JSON schema)
+    """
+    text = await extract_text_payload(page)
+    head = text[:500]
+
+    # Fast-path hints (not authoritative alone)
+    if ACCESS_DENIED_RE.search(head) or QUEUE_RE.search(head):
+        return None, "auth", head
+
+    # Must be JSON
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError:
+        return None, "auth", head
+
+    # Must match schema (hits object present)
+    if not is_valid_multimedia_json(data):
+        return None, "auth", head
+
+    return data, None, head
 
 
 async def probe_one(
@@ -101,26 +175,21 @@ async def probe_one(
 ) -> tuple[str | None, str | None]:
     """
     Returns (origin_or_none, error_kind_or_none)
-    error_kind in {"auth","timeout","json","other", None}
+    error_kind in {"auth","timeout","other", None}
     """
     url = multimedia_url(fname)
-    last_body = ""
 
     for attempt in range(1, retries + 1):
         try:
             await page.goto(url, wait_until="domcontentloaded", timeout=nav_timeout_ms)
 
-            try:
-                body = (await page.locator("body").inner_text()).strip()
-            except Exception:
-                body = ""
-            last_body = body[:300]
-
-            if ACCESS_DENIED_RE.search(body) or QUEUE_RE.search(body):
+            data, err, _head = await parse_search_json_or_invalid(page)
+            if err == "auth":
                 return None, "auth"
+            if data is None:
+                return None, "other"
 
-            data = await extract_json_from_page(page)
-            hits = data.get("hits", {}).get("hits", [])
+            hits = data["hits"]["hits"]
             if not hits:
                 return None, None
 
@@ -133,24 +202,24 @@ async def probe_one(
         except PWTimeoutError:
             if attempt == retries:
                 return None, "timeout"
-        except json.JSONDecodeError:
-            if ACCESS_DENIED_RE.search(last_body) or QUEUE_RE.search(last_body):
-                return None, "auth"
-            if attempt == retries:
-                return None, "json"
         except Exception:
-            return None, "other"
+            if attempt == retries:
+                return None, "other"
 
     return None, "other"
 
 
 async def reauth_pause(context, anchor_page) -> None:
     print("\n[AUTH REQUIRED]")
-    print("Fix the queue/auth in the browser window (refresh, wait, etc.).")
-    print("When it works again, press Enter here.\n")
+    print("Fix the queue/auth in the browser window (refresh, wait, bot-check, etc.).")
+    print(
+        "When a /multimedia-search?keys=mom&page=1 page shows JSON, press Enter here.\n"
+    )
     input()
+
     await context.storage_state(path=str(STATE_PATH))
     print(f"[auth] Saved updated state to {STATE_PATH}.\n")
+
     try:
         await anchor_page.goto(
             multimedia_url("mom"),
@@ -167,6 +236,8 @@ async def run_dataset(
     nav_timeout_ms: int,
     retries: int,
     auth_fails_in_row_limit: int,
+    auth_min_in_chunk: int,
+    auth_fraction_in_chunk: float,
 ) -> None:
     if dataset not in DATASET_RANGES:
         raise ValueError(
@@ -182,8 +253,7 @@ async def run_dataset(
     else:
         start_n = lo
 
-    if start_n < lo:
-        start_n = lo
+    start_n = max(start_n, lo)
 
     if start_n > hi:
         print(f"[ds={dataset}] already complete (resume start {start_n} > {hi}).")
@@ -214,7 +284,7 @@ async def run_dataset(
 
         checked = 0
         appended = 0
-        auth_fails_in_row = 0
+        auth_like_chunks_in_row = 0
 
         n = start_n
         while n <= hi:
@@ -243,15 +313,20 @@ async def run_dataset(
             new_links: list[str] = []
             new_names: list[str] = []
 
-            any_auth_error = any(err == "auth" for _, err in results)
-            if any_auth_error:
-                auth_fails_in_row += 1
-            else:
-                auth_fails_in_row = 0
+            auth_count = sum(1 for _, err in results if err == "auth")
+            auth_frac = auth_count / max(1, len(results))
+            is_auth_like_chunk = (auth_count >= auth_min_in_chunk) and (
+                auth_frac >= auth_fraction_in_chunk
+            )
 
-            if auth_fails_in_row >= auth_fails_in_row_limit:
+            if is_auth_like_chunk:
+                auth_like_chunks_in_row += 1
+            else:
+                auth_like_chunks_in_row = 0
+
+            if auth_like_chunks_in_row >= auth_fails_in_row_limit:
                 await reauth_pause(context, anchor)
-                auth_fails_in_row = 0
+                auth_like_chunks_in_row = 0
 
             for (origin, err), fn in zip(results, fnames):
                 if origin:
@@ -268,12 +343,13 @@ async def run_dataset(
 
             appended += len(new_links)
 
-            # Resume: store LAST attempted file in this chunk (simple, robust)
+            # Resume: store LAST attempted file in this chunk
             save_resume(resume_path, fnames[-1])
 
             print(
                 f"[ds={dataset}] {fnames[0]}..{fnames[-1]} "
                 f"checked={checked:,} appended={appended:,} "
+                f"auth_in_chunk={auth_count}/{len(results)} "
                 f"(resume last={fnames[-1]})"
             )
 
@@ -307,6 +383,18 @@ def parse_args() -> argparse.Namespace:
         default=AUTH_FAILS_IN_ROW_DEFAULT,
         help="Pause for re-auth after this many auth-like chunks in a row",
     )
+    ap.add_argument(
+        "--auth-min-in-chunk",
+        type=int,
+        default=AUTH_MIN_IN_CHUNK_DEFAULT,
+        help="Minimum auth results inside a chunk to treat the chunk as auth-like",
+    )
+    ap.add_argument(
+        "--auth-frac-in-chunk",
+        type=float,
+        default=AUTH_FRACTION_IN_CHUNK_DEFAULT,
+        help="Minimum fraction of auth results inside a chunk to treat the chunk as auth-like",
+    )
     return ap.parse_args()
 
 
@@ -319,5 +407,7 @@ if __name__ == "__main__":
             nav_timeout_ms=args.timeout_ms,
             retries=args.retries,
             auth_fails_in_row_limit=args.auth_fails,
+            auth_min_in_chunk=args.auth_min_in_chunk,
+            auth_fraction_in_chunk=args.auth_frac_in_chunk,
         )
     )

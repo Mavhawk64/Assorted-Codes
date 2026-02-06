@@ -18,17 +18,13 @@ YES_TEXT_RE = re.compile(r"^Yes$", re.IGNORECASE)
 FILENAME_RE = re.compile(r"^EFTA(?P<num>\d{8})\.pdf$", re.IGNORECASE)
 DATASET_RE = re.compile(r"/DataSet(?:%20|\s)(?P<ds>\d{1,2})/", re.IGNORECASE)
 
-# Your confirmed last pages (inclusive)
+# Stop condition: keep crawling until we see the very first file again (loop)
+STOP_ON_LOOP_BACK_TO_FIRST = True
+
 LAST_PAGES: dict[int, int] = {
-    1: 63,
-    2: 11,
-    3: 1,
-    4: 3,
-    5: 2,
-    6: 0,
-    7: 0,
-    8: 220,
-    12: 2,
+    9: 10_000,
+    10: 10_000,
+    11: 10_000,
 }
 
 # Throttle / rate-limit handling
@@ -147,7 +143,7 @@ def hrefs_to_urls_and_names(hrefs: list[str]) -> tuple[list[str], list[str]]:
 
 async def manual_auth_once(page, context) -> None:
     await page.goto(
-        dataset_page_url(1, 0), wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS
+        dataset_page_url(9, 0), wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS
     )
     await maybe_accept_age_gate(page)
 
@@ -195,10 +191,15 @@ async def get_hrefs_with_backoff(page, ds: int, pageno: int) -> list[str]:
     return []
 
 
-async def main() -> None:
-    # NOTE: This is resume-aware. We do NOT clear outputs automatically.
-    # If you want a fresh run, delete the output files and resume_state.json manually.
+def first_efta_in_hrefs(hrefs: list[str]) -> str | None:
+    for h in hrefs:
+        fname = h.rsplit("/", 1)[-1]
+        if FILENAME_RE.match(fname):
+            return fname
+    return None
 
+
+async def main() -> None:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False, slow_mo=0)
         context = await browser.new_context(
@@ -244,13 +245,36 @@ async def main() -> None:
 
             print(f"=== Data Set {ds} (pages {start_page}..{last_page}) ===")
 
+            first_file_seen_this_ds: str | None = None
+            looped_back = False
+
             for pageno in range(start_page, last_page + 1):
                 hrefs = await get_hrefs_with_backoff(page, ds, pageno)
                 if not hrefs:
                     print(f"[warn] ds={ds} page={pageno}: no items (skipping)")
-                    # Still advance resume to avoid being stuck forever on a flaky page
                     save_resume_state(ds, pageno + 1)
                     continue
+
+                # Loop-back stop condition (dataset 9/10/11 weird paging)
+                if STOP_ON_LOOP_BACK_TO_FIRST:
+                    first_on_page = first_efta_in_hrefs(hrefs)
+                    if first_on_page:
+                        if first_file_seen_this_ds is None:
+                            first_file_seen_this_ds = first_on_page
+                        else:
+                            if (
+                                pageno > start_page
+                                and first_on_page == first_file_seen_this_ds
+                            ):
+                                print(
+                                    f"[ds={ds}] Loop-back detected: first file {first_on_page} "
+                                    f"matches initial {first_file_seen_this_ds}. Stopping."
+                                )
+                                looped_back = True
+                                next_ds = advance_to_next_dataset(ds)
+                                if next_ds is not None:
+                                    save_resume_state(next_ds, 0)
+                                break
 
                 urls, names = hrefs_to_urls_and_names(hrefs)
 
@@ -289,10 +313,10 @@ async def main() -> None:
                 if PAGE_DELAY_MS:
                     await page.wait_for_timeout(PAGE_DELAY_MS)
 
-            # Finished this dataset: advance resume to the next dataset, page 0
-            next_ds = advance_to_next_dataset(ds)
-            if next_ds is not None:
-                save_resume_state(next_ds, 0)
+            if not looped_back:
+                next_ds = advance_to_next_dataset(ds)
+                if next_ds is not None:
+                    save_resume_state(next_ds, 0)
 
             print()
 
