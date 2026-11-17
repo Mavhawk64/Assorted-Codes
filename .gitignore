@@ -1,1 +1,14 @@
 accounting/
+
+# Python environments and bytecode
+.venv/
+.venv.zip
+__pycache__/
+*.py[cod]
+
+# Local configuration and browser session data
+.env
+storage_state.json
+
+# Generated plots
+superluminal_motion/jet_effect.png
